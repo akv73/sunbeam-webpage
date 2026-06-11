@@ -1,0 +1,1009 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: Arial, sans-serif;
+    background: #f4f4f4;
+    color: #333;
+}
+
+/* ================= NAVBAR ================= */
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background: #003366;
+
+    padding: 15px 50px;
+
+    position: sticky;
+    top: 0;
+
+    z-index: 1000;
+
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo img{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+}
+
+.logo span{
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav-links{
+    display: flex;
+    list-style: none;
+    gap: 25px;
+
+    z-index: 999;
+}
+
+.nav-links a{
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover{
+    color: yellow;
+}
+
+.nav-links a.active{
+    color: yellow;
+    border-bottom: 2px solid yellow;
+    padding-bottom: 5px;
+}
+
+/* ================= HERO SECTION ================= */
+
+.hero{
+    height: 100vh;
+
+    background-image:
+    linear-gradient(rgba(0,0,0,0.5),
+    rgba(0,0,0,0.5)),
+    url('images/school.jpg');
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    color: white;
+
+    position: relative;
+}
+
+.hero-content h1{
+    font-size: 60px;
+    margin-bottom: 20px;
+}
+
+.hero-content p{
+    font-size: 25px;
+    margin-bottom: 25px;
+}
+
+.hero-content button{
+    padding: 14px 35px;
+
+    border: none;
+
+    background: yellow;
+
+    color: black;
+
+    font-size: 18px;
+
+    border-radius: 50px;
+
+    cursor: pointer;
+
+    transition: all 0.4s ease;
+
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.hero-content button:hover{
+    background: orange;
+
+    transform: translateY(-5px);
+
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+/* ================= DARK MODE BUTTON ================= */
+
+.dark-mode-btn{
+    position: absolute;
+
+    top: 30px;
+    right: 30px;
+
+    padding: 12px 18px;
+
+    border: none;
+
+    background: white;
+
+    cursor: pointer;
+
+    border-radius: 8px;
+
+    font-size: 20px;
+
+    transition: 0.3s;
+
+    z-index: 100;
+}
+
+.dark-mode-btn:hover{
+    background: yellow;
+
+    transform: scale(1.05);
+}
+
+/* ================= ABOUT SECTION ================= */
+
+.about{
+    padding: 80px 50px;
+
+    background: white;
+
+    text-align: center;
+}
+
+.about h2{
+    font-size: 40px;
+
+    color: #003366;
+
+    margin-bottom: 20px;
+}
+
+.about p{
+    font-size: 20px;
+
+    line-height: 1.8;
+
+    max-width: 900px;
+
+    margin: auto;
+}
+
+/* ================= FACILITIES SECTION ================= */
+
+.facilities{
+    padding: 80px 50px;
+
+    background: #f0f8ff;
+
+    text-align: center;
+}
+
+.facilities h2{
+    font-size: 40px;
+
+    color: #003366;
+
+    margin-bottom: 50px;
+}
+
+.facility-container{
+    display: grid;
+
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+
+    gap: 30px;
+}
+
+.card{
+    background: white;
+
+    padding: 30px;
+
+    border-radius: 10px;
+
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+
+    transition: 0.3s;
+}
+
+.card:hover{
+    transform: translateY(-12px) scale(1.02);
+
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.card h3{
+    color: #003366;
+
+    margin-bottom: 15px;
+
+    font-size: 25px;
+}
+
+.card p{
+    font-size: 18px;
+
+    line-height: 1.6;
+}
+
+/* ================= COUNTER SECTION ================= */
+
+.counter-section{
+    padding: 80px 50px;
+
+    background: #003366;
+
+    color: white;
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 50px;
+
+    flex-wrap: wrap;
+
+    text-align: center;
+}
+
+.counter-box h2{
+    font-size: 55px;
+
+    margin-bottom: 10px;
+
+    color: yellow;
+}
+
+.counter-box p{
+    font-size: 22px;
+}
+
+/* ================= TESTIMONIAL SECTION ================= */
+
+.testimonials{
+    padding: 80px 50px;
+
+    background: white;
+
+    text-align: center;
+}
+
+.testimonials h2{
+    font-size: 40px;
+
+    color: #003366;
+
+    margin-bottom: 50px;
+}
+
+.testimonial-container{
+    display: flex;
+
+    justify-content: center;
+
+    gap: 30px;
+
+    flex-wrap: wrap;
+}
+
+.testimonial-card{
+    background: #f0f8ff;
+
+    padding: 30px;
+
+    width: 320px;
+
+    border-radius: 10px;
+
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+
+    transition: 0.3s;
+}
+
+.testimonial-card:hover{
+    transform: translateY(-10px);
+}
+
+.testimonial-card p{
+    font-size: 18px;
+
+    line-height: 1.7;
+
+    margin-bottom: 20px;
+}
+
+.testimonial-card h3{
+    color: #003366;
+}
+
+/* ================= GALLERY SECTION ================= */
+
+.gallery{
+    padding: 80px 50px;
+
+    background: white;
+
+    text-align: center;
+}
+
+.gallery h2{
+    font-size: 40px;
+
+    color: #003366;
+
+    margin-bottom: 50px;
+}
+
+.gallery-container{
+    display: grid;
+
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+
+    gap: 25px;
+}
+
+.gallery-container img{
+    width: 100%;
+
+    height: 250px;
+
+    object-fit: cover;
+
+    border-radius: 10px;
+
+    transition: 0.3s;
+
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.gallery-container img:hover{
+    transform: scale(1.08);
+
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+/* ================= PRINCIPAL SECTION ================= */
+
+.principal{
+    padding: 80px 50px;
+
+    background: #f0f8ff;
+}
+
+.principal-container{
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 50px;
+
+    flex-wrap: wrap;
+}
+
+.principal-image img{
+    width: 320px;
+
+    border-radius: 15px;
+
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.principal-text{
+    max-width: 600px;
+}
+
+.principal-text h2{
+    font-size: 40px;
+
+    color: #003366;
+
+    margin-bottom: 20px;
+}
+
+.principal-text p{
+    font-size: 20px;
+
+    line-height: 1.8;
+}
+
+/* ================= ADMISSION SECTION ================= */
+
+.admission-banner{
+    padding: 100px 50px;
+
+    background:
+    linear-gradient(rgba(0,0,0,0.6),
+    rgba(0,0,0,0.6)),
+    url('images/admission.jpeg');
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    text-align: center;
+    color: white;
+}
+
+.banner-content h2{
+    font-size: 50px;
+
+    margin-bottom: 20px;
+}
+
+.banner-content p{
+    font-size: 22px;
+
+    margin-bottom: 30px;
+}
+
+.banner-content button{
+    padding: 15px 35px;
+
+    border: none;
+
+    background: yellow;
+
+    color: black;
+
+    font-size: 18px;
+
+    border-radius: 50px;
+
+    cursor: pointer;
+
+    transition: all 0.4s ease;
+
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.banner-content button:hover{
+    background: orange;
+
+    transform: translateY(-5px);
+
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+/* ================= CONTACT SECTION ================= */
+
+.contact{
+    padding: 80px 50px;
+
+    background: white;
+
+    text-align: center;
+}
+
+.contact h2{
+    font-size: 40px;
+
+    color: #003366;
+
+    margin-bottom: 40px;
+}
+
+.contact-container{
+    display: flex;
+
+    justify-content: center;
+
+    gap: 50px;
+
+    flex-wrap: wrap;
+}
+
+.contact-info{
+    text-align: left;
+
+    font-size: 20px;
+
+    line-height: 2;
+}
+
+.contact-form{
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 20px;
+
+    width: 400px;
+}
+
+.contact-form input,
+.contact-form textarea{
+    padding: 15px;
+
+    border: 1px solid #ccc;
+
+    border-radius: 5px;
+
+    font-size: 16px;
+}
+
+.contact-form textarea{
+    height: 120px;
+
+    resize: none;
+}
+
+.contact-form button{
+    padding: 15px;
+
+    border: none;
+
+    background: #003366;
+
+    color: white;
+
+    font-size: 18px;
+
+    border-radius: 50px;
+
+    cursor: pointer;
+
+    transition: all 0.4s ease;
+}
+
+.contact-form button:hover{
+    background: #0055aa;
+
+    transform: translateY(-5px);
+
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+/* ================= FOOTER ================= */
+
+.footer{
+    background: #002244;
+
+    color: white;
+
+    padding-top: 60px;
+}
+
+.footer-container{
+    display: flex;
+
+    justify-content: space-between;
+
+    flex-wrap: wrap;
+
+    gap: 40px;
+
+    padding: 0 50px 50px;
+}
+
+.footer-box{
+    flex: 1;
+
+    min-width: 250px;
+}
+
+.footer-box h2,
+.footer-box h3{
+    margin-bottom: 20px;
+
+    color: yellow;
+}
+
+.footer-box p{
+    line-height: 1.8;
+
+    font-size: 17px;
+}
+
+.footer-box ul{
+    list-style: none;
+}
+
+.footer-box ul li{
+    margin-bottom: 12px;
+}
+
+.footer-box ul li a{
+    text-decoration: none;
+
+    color: white;
+
+    transition: 0.3s;
+}
+
+.footer-box ul li a:hover{
+    color: yellow;
+}
+
+.footer-bottom{
+    text-align: center;
+
+    padding: 20px;
+
+    background: #001122;
+
+    font-size: 16px;
+}
+
+/* ================= HAMBURGER MENU ================= */
+
+.menu-toggle{
+    display: none;
+
+    font-size: 35px;
+
+    color: white;
+
+    cursor: pointer;
+}
+
+/* ================= BACK TO TOP ================= */
+
+#topBtn{
+    position: fixed;
+
+    bottom: 30px;
+    right: 30px;
+
+    padding: 15px 18px;
+
+    font-size: 22px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: #003366;
+
+    color: white;
+
+    cursor: pointer;
+
+    display: none;
+
+    z-index: 1000;
+
+    transition: 0.3s;
+}
+
+#topBtn:hover{
+    background: #0055aa;
+
+    transform: scale(1.1);
+}
+
+/* ================= LOADER ================= */
+
+#loader{
+    position: fixed;
+
+    width: 100%;
+    height: 100vh;
+
+    background: white;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    z-index: 99999;
+
+    transition: opacity 0.5s ease;
+}
+
+.spinner{
+    width: 70px;
+    height: 70px;
+
+    border: 8px solid #ddd;
+
+    border-top: 8px solid #003366;
+
+    border-radius: 50%;
+
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin{
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+/* ================= SCROLL ANIMATION ================= */
+
+.hidden{
+    opacity: 0;
+
+    transform: translateY(50px);
+
+    transition: all 1s ease;
+}
+
+.show{
+    opacity: 1;
+
+    transform: translateY(0);
+}
+
+/* ================= HEADING STYLE ================= */
+
+section h2{
+    position: relative;
+
+    display: inline-block;
+}
+
+section h2::after{
+    content: "";
+
+    width: 60%;
+
+    height: 4px;
+
+    background: yellow;
+
+    position: absolute;
+
+    left: 20%;
+
+    bottom: -10px;
+
+    border-radius: 10px;
+}
+
+/* ================= DARK MODE ================= */
+
+.dark-mode{
+    background: #121212;
+
+    color: white;
+}
+
+.dark-mode .about,
+.dark-mode .gallery,
+.dark-mode .contact,
+.dark-mode .testimonials,
+.dark-mode .footer,
+.dark-mode .counter-section{
+    background: #1e1e1e;
+
+    color: white;
+}
+
+.dark-mode .facilities,
+.dark-mode .principal{
+    background: #2a2a2a;
+
+    color: white;
+}
+
+.dark-mode .card,
+.dark-mode .testimonial-card{
+    background: #333;
+
+    color: white;
+}
+
+.dark-mode h2,
+.dark-mode h3{
+    color: #00bfff;
+}
+
+.dark-mode input,
+.dark-mode textarea{
+    background: #333;
+
+    color: white;
+
+    border: 1px solid #777;
+}
+
+/* ================= CUSTOM SCROLLBAR ================= */
+
+::-webkit-scrollbar{
+    width: 10px;
+}
+
+::-webkit-scrollbar-track{
+    background: #ddd;
+}
+
+::-webkit-scrollbar-thumb{
+    background: #003366;
+
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background: #0055aa;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width: 900px){
+
+    .navbar{
+        flex-direction: column;
+
+        gap: 20px;
+
+        padding: 20px;
+    }
+
+    .logo{
+        flex-direction: column;
+
+        text-align: center;
+    }
+
+    .logo span{
+        font-size: 20px;
+    }
+
+    .nav-links{
+        flex-wrap: wrap;
+
+        justify-content: center;
+
+        gap: 15px;
+    }
+
+    .hero-content h1{
+        font-size: 38px;
+
+        line-height: 1.4;
+    }
+
+    .hero-content p{
+        font-size: 20px;
+    }
+
+    .about,
+    .facilities,
+    .gallery,
+    .principal,
+    .contact,
+    .testimonials,
+    .admission-banner{
+        padding: 60px 20px;
+    }
+
+    .counter-section{
+        padding: 60px 20px;
+
+        gap: 30px;
+    }
+
+    .counter-box h2{
+        font-size: 40px;
+    }
+
+    .principal-container{
+        flex-direction: column;
+    }
+
+    .principal-image img{
+        width: 100%;
+
+        max-width: 300px;
+    }
+
+    .contact-form{
+        width: 100%;
+    }
+
+    .footer-container{
+        flex-direction: column;
+
+        text-align: center;
+    }
+
+    .footer-box{
+        width: 100%;
+    }
+}
+
+/* ================= MOBILE MENU ================= */
+
+@media(max-width: 768px){
+
+    .menu-toggle{
+        display: block;
+    }
+
+    .nav-links{
+        position: absolute;
+
+        top: 100px;
+        left: 0;
+
+        width: 100%;
+
+        background: #003366;
+
+        flex-direction: column;
+
+        align-items: center;
+
+        padding: 20px 0;
+
+        display: none;
+    }
+
+    .nav-links.active{
+        display: flex;
+    }
+}
+
+/* ================= EXTRA SMALL DEVICES ================= */
+
+@media(max-width: 500px){
+
+    .hero-content h1{
+        font-size: 30px;
+    }
+
+    .hero-content p{
+        font-size: 18px;
+    }
+
+    .hero-content button{
+        padding: 12px 25px;
+
+        font-size: 16px;
+    }
+
+    .navbar{
+        padding: 15px;
+    }
+
+    .logo img{
+        width: 60px;
+        height: 60px;
+    }
+
+    .dark-mode-btn{
+        top: 20px;
+        right: 20px;
+    }
+
+    .counter-box h2{
+        font-size: 35px;
+    }
+
+    .counter-box p{
+        font-size: 18px;
+    }
+}
